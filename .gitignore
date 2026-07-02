@@ -1,0 +1,11 @@
+# Python bytecode cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# uv / virtualenv
+.venv/
+
+# Generated & downloaded artifacts (recreate with train.py)
+data/
+models/
