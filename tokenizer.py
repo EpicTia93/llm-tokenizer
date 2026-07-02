@@ -18,6 +18,8 @@ import regex as re
 # GPT-4 / cl100k_base style split pattern. Requires the third-party ``regex``
 # module (not the stdlib ``re``) because of the Unicode property escapes
 # (\p{L}, \p{N}) and possessive quantifiers (?+, ++).
+# We split each word in the pre-processing dataset according to this regex before
+# tokenizing each item of the list independently
 GPT_SPLIT_PATTERN = (
     r"""'(?i:[sdmt]|ll|ve|re)|[^\r\n\p{L}\p{N}]?+\p{L}+|\p{N}{1,3}"""
     r"""| ?[^\s\p{L}\p{N}]++[\r\n]*|\s*[\r\n]|\s+(?!\S)|\s+"""
